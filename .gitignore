@@ -1,0 +1,5 @@
+### Ollama volume (Models, etc) ###
+ollama/**
+
+### VS Code ###
+.vscode/
