@@ -21,8 +21,8 @@ services:
         capabilities: [gpu]
 
     # limites para não travar o Windows/WSL
-    cpus: 2.5
-    mem_limit: 8g
+    #cpus: 2.5
+    mem_limit: 10g
 
   ollama-webui:
     image: ghcr.io/open-webui/open-webui:main

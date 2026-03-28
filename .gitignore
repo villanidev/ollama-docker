@@ -3,3 +3,6 @@ ollama/**
 
 ### VS Code ###
 .vscode/
+
+### huggingface volume (Models, etc) ###
+huggingface/**

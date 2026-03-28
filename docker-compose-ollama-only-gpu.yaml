@@ -1,0 +1,22 @@
+services:
+  ollama-server:
+    image: docker.io/ollama/ollama:latest
+    container_name: ollama-server
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    environment:
+      - OLLAMA_KEEP_ALIVE=1h
+    volumes:
+      - ./ollama/ollama-server:/root/.ollama
+    # (compose v2) habilita GPU no modo "não-swarm"
+    gpus:
+      - driver: nvidia
+        count: all
+        capabilities: [gpu]
+
+    # limites para não travar o Windows/WSL
+    #cpus: 2.5
+    mem_limit: 10g
